@@ -1,0 +1,114 @@
+<div class="container">
+
+  <h1>
+<img src="https://cdn.pixabay.com/animation/2023/04/24/03/28/03-28-38-344_512.gif" style="width: 70px"/> 
+Form An Email</h1>
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" placeholder="Billing..." />
+
+  <label for="from"
+    >From:
+    <select id="from">
+      <option> Meow Meow 1 </option>
+      <option> Meow Meow 2 </option>
+      <option> Meow Meow 3 </option>
+      <option> Meow Meow 4 </option>
+      <option> Meow Meow 5 </option>
+      <option> Meow Meow 6 </option>
+    </select>
+  </label>
+
+  <label for="to"
+    >To:
+    <select id="to">
+      <option> Meow Meow 1 </option>
+      <option> Meow Meow 2 </option>
+      <option> Meow Meow 3 </option>
+      <option> Meow Meow 4 </option>
+      <option> Meow Meow 5 </option>
+      <option> Meow Meow 6 </option>
+    </select>
+  </label>
+
+  <label for="cc"
+    > CC:
+    <select id="cc">
+      <option> Meow Meow 1 </option>
+      <option> Meow Meow 2 </option>
+      <option> Meow Meow 3 </option>
+      <option> Meow Meow 4 </option>
+      <option> Meow Meow 5 </option>
+      <option> Meow Meow 6 </option>
+    </select>
+  </label>
+
+  <label for="bcc"
+    > BCC:
+    <select id="bcc">
+      <option> Meow Meow 1 </option>
+      <option> Meow Meow 2 </option>
+      <option> Meow Meow 3 </option>
+      <option> Meow Meow 4 </option>
+      <option> Meow Meow 5 </option>
+      <option> Meow Meow 6 </option>
+    </select>
+  </label>
+
+  <label for="announcement">Announcement:</label>
+  <input type="text" id="announcement" placeholder="Your announcement..." />
+
+  <label for="requirement">Requirement:</label>
+  <input type="text" id="requirement" placeholder="Your requirement..." />
+
+  <label for="invitation">Invitation:</label>
+  <input type="text" id="invitation" placeholder="Your invitation..." />
+
+  <label for="solution">Solution:</label>
+  <input type="text" id="solution" placeholder="Your solution..." />
+
+  <label for="suggestion">Suggestion:</label>
+  <input type="text" id="suggestion" placeholder="Your suggestion..." />
+
+  <label for="moral">Moral/Message:</label>
+  <input type="text" id="moral" placeholder="Your moral/message" />
+
+  <label for="deadline">Deadline:</label>
+  <input type="date" id="deadline" placeholder="Deadline" />
+
+  <button onclick="generatePrompt()">Generate</button>
+  <div id="output"></div>
+</div>
+
+<script>
+function generatePrompt() {
+  const subject = document.getElementById("subject").value || "";
+  const from = document.getElementById("from").value || "";
+  const to = document.getElementById("to").value || "";
+  const cc = document.getElementById("cc").value || "";
+  const bcc = document.getElementById("bcc").value || "";
+  const announcement = document.getElementById("announcement").value || "";
+  const requirement = document.getElementById("requirement").value || "";
+  const invitation = document.getElementById("invitation").value || "";
+  const solution = document.getElementById("solution").value || "";
+  const suggestion = document.getElementById("suggestion").value || "";
+  const moral = document.getElementById("moral").value || "";
+  const deadline = document.getElementById("deadline").value || "";
+
+  const output = `
+      Subject: ${subject}
+      From: ${from}
+      To: ${to}
+      CC: ${cc}
+      BCC: ${bcc}
+      Announcement: ${announcement}
+      Requirement: ${requirement}
+      Invitation: ${invitation}
+      Solution: ${solution}
+      Suggestion: ${suggestion}
+      Message: ${moral}
+      Deadline: ${deadline}
+  `;
+
+  document.getElementById("output").innerText = output;
+}
+</script>
